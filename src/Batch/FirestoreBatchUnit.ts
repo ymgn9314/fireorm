@@ -1,8 +1,8 @@
-import { Firestore, DocumentReference } from '@google-cloud/firestore';
-import { serializeEntity } from '../utils';
-import type { FullCollectionMetadata } from '../MetadataStorage';
+import { DocumentReference, Firestore } from '@google-cloud/firestore';
 import type { ValidationError } from '../Errors/ValidationError';
-import type { IEntity, Constructor, ValidatorOptions } from '../types';
+import type { FullCollectionMetadata } from '../MetadataStorage';
+import type { Constructor, IEntity, ValidatorOptions } from '../types';
+import { serializeEntity } from '../utils';
 
 type BatchOperation<T extends IEntity> = {
   type: 'create' | 'update' | 'delete';

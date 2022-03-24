@@ -1,20 +1,17 @@
-import 'reflect-metadata';
-
 import { Query, WhereFilterOp } from '@google-cloud/firestore';
-
-import {
-  IRepository,
-  IFireOrmQueryLine,
-  IOrderByParams,
-  IEntity,
-  PartialBy,
-  ITransactionRepository,
-  ICustomQuery,
-} from './types';
-
-import { getMetadataStorage } from './MetadataUtils';
+import 'reflect-metadata';
 import { AbstractFirestoreRepository } from './AbstractFirestoreRepository';
 import { FirestoreBatch } from './Batch/FirestoreBatch';
+import { getMetadataStorage } from './MetadataUtils';
+import {
+  ICustomQuery,
+  IEntity,
+  IFireOrmQueryLine,
+  IOrderByParams,
+  IRepository,
+  ITransactionRepository,
+  PartialBy,
+} from './types';
 
 export class BaseFirestoreRepository<T extends IEntity>
   extends AbstractFirestoreRepository<T>

@@ -1,12 +1,12 @@
 import { Transaction } from '@google-cloud/firestore';
-import { TransactionRepository } from './BaseFirestoreTransactionRepository';
 import { getMetadataStorage } from '../MetadataUtils';
 import {
-  IEntity,
   EntityConstructorOrPath,
+  IEntity,
   IFirestoreTransaction,
   ITransactionReferenceStorage,
 } from '../types';
+import { TransactionRepository } from './BaseFirestoreTransactionRepository';
 
 const metadataStorage = getMetadataStorage();
 

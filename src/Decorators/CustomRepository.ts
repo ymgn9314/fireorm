@@ -1,6 +1,6 @@
-import { getMetadataStorage } from '../MetadataUtils';
-import { Constructor, IRepository, IEntity } from '../types';
 import { BaseRepository } from '../BaseRepository';
+import { getMetadataStorage } from '../MetadataUtils';
+import { Constructor, IEntity, IRepository } from '../types';
 
 /*
   Cannot enforce the type in target presumably becasuse Typescript

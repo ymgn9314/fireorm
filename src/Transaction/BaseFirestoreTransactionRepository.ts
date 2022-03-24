@@ -1,16 +1,15 @@
 import { Query, Transaction, WhereFilterOp } from '@google-cloud/firestore';
-
+import { AbstractFirestoreRepository } from '../AbstractFirestoreRepository';
 import {
+  EntityConstructorOrPath,
   IEntity,
   IFireOrmQueryLine,
-  WithOptionalId,
   IQueryBuilder,
-  ITransactionRepository,
-  EntityConstructorOrPath,
   ITransactionReferenceStorage,
+  ITransactionRepository,
+  WithOptionalId,
 } from '../types';
 
-import { AbstractFirestoreRepository } from '../AbstractFirestoreRepository';
 export class TransactionRepository<T extends IEntity>
   extends AbstractFirestoreRepository<T>
   implements ITransactionRepository<T>

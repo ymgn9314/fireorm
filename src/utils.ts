@@ -1,6 +1,6 @@
+import { IEntity } from '.';
 import { ignoreKey, serializeKey } from './Decorators';
 import { SubCollectionMetadata } from './MetadataStorage';
-import { IEntity } from '.';
 
 /**
  * Extract getters and object in form of data properties

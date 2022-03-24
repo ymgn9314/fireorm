@@ -1,6 +1,6 @@
-import { getMetadataStorage } from '../MetadataUtils';
 import { plural } from 'pluralize';
-import { IEntityConstructor, IEntity } from '../types';
+import { getMetadataStorage } from '../MetadataUtils';
+import { IEntity, IEntityConstructor } from '../types';
 
 export function SubCollection(entityConstructor: IEntityConstructor, entityName?: string) {
   return function (parentEntity: IEntity, propertyKey: string) {

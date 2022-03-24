@@ -1,5 +1,5 @@
-import { getMetadataStorage } from '../MetadataUtils';
 import { plural } from 'pluralize';
+import { getMetadataStorage } from '../MetadataUtils';
 import type { IEntityConstructor } from '../types';
 
 export function Collection(entityName?: string) {

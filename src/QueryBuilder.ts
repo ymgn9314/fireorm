@@ -1,15 +1,14 @@
 import { getPath } from 'ts-object-path';
-
 import {
-  IQueryBuilder,
-  IFireOrmQueryLine,
-  IOrderByParams,
-  IFirestoreVal,
   FirestoreOperators,
-  IQueryExecutor,
-  IEntity,
-  IWherePropParam,
   ICustomQuery,
+  IEntity,
+  IFireOrmQueryLine,
+  IFirestoreVal,
+  IOrderByParams,
+  IQueryBuilder,
+  IQueryExecutor,
+  IWherePropParam,
 } from './types';
 
 export class QueryBuilder<T extends IEntity> implements IQueryBuilder<T> {

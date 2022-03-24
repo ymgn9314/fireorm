@@ -1,8 +1,8 @@
-import { getMetadataStorage } from './MetadataUtils';
 import { BaseFirestoreRepository } from './BaseFirestoreRepository';
-import { IEntity, EntityConstructorOrPath, ITransactionReferenceStorage } from './types';
-import { FirestoreTransaction } from './Transaction/FirestoreTransaction';
 import { FirestoreBatch } from './Batch/FirestoreBatch';
+import { getMetadataStorage } from './MetadataUtils';
+import { FirestoreTransaction } from './Transaction/FirestoreTransaction';
+import { EntityConstructorOrPath, IEntity, ITransactionReferenceStorage } from './types';
 
 type RepositoryType = 'default' | 'base' | 'custom' | 'transaction';
 

@@ -2,7 +2,6 @@
 
 Fireorm is just a library to simplify the way we communicate with firestore. It does not implement the underlying communication with the database (it resorts to official sdk's for that, such as [firebase-admin](https://www.npmjs.com/package/firebase-admin)).
 
-
 ## Firestore
 
 According to [it's homepage](https://cloud.google.com/firestore), Firestore is a fast, fully managed, serverless, cloud-native NoSQL document database that simplifies storing, syncing, and querying data for your mobile, web, and IoT apps at global scale.

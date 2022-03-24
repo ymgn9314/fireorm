@@ -1,36 +1,32 @@
-import { plainToClass } from 'class-transformer';
 import {
+  CollectionReference,
   DocumentSnapshot,
   QuerySnapshot,
-  CollectionReference,
   Transaction,
 } from '@google-cloud/firestore';
-import { serializeKey } from './Decorators/Serialize';
-import { ValidationError } from './Errors/ValidationError';
-
-import {
-  IEntity,
-  IQueryBuilder,
-  IWherePropParam,
-  IFirestoreVal,
-  IFireOrmQueryLine,
-  IOrderByParams,
-  IRepository,
-  PartialBy,
-  IEntityConstructor,
-  ITransactionReferenceStorage,
-  ICustomQuery,
-} from './types';
-
-import { isDocumentReference, isGeoPoint, isObject, isTimestamp } from './TypeGuards';
-
-import { getMetadataStorage } from './MetadataUtils';
-import { MetadataStorageConfig, FullCollectionMetadata } from './MetadataStorage';
-
+import { plainToClass } from 'class-transformer';
 import { BaseRepository } from './BaseRepository';
-import { QueryBuilder } from './QueryBuilder';
-import { serializeEntity } from './utils';
+import { serializeKey } from './Decorators/Serialize';
 import { NoMetadataError } from './Errors';
+import { ValidationError } from './Errors/ValidationError';
+import { FullCollectionMetadata, MetadataStorageConfig } from './MetadataStorage';
+import { getMetadataStorage } from './MetadataUtils';
+import { QueryBuilder } from './QueryBuilder';
+import { isDocumentReference, isGeoPoint, isObject, isTimestamp } from './TypeGuards';
+import {
+  ICustomQuery,
+  IEntity,
+  IEntityConstructor,
+  IFireOrmQueryLine,
+  IFirestoreVal,
+  IOrderByParams,
+  IQueryBuilder,
+  IRepository,
+  ITransactionReferenceStorage,
+  IWherePropParam,
+  PartialBy,
+} from './types';
+import { serializeEntity } from './utils';
 
 export abstract class AbstractFirestoreRepository<T extends IEntity>
   extends BaseRepository
